@@ -1,6 +1,5 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
-import genres from "../data/genres"
 import APIClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./usePlatforms";
 
@@ -48,7 +47,7 @@ const useGames = (gameQuery: GameQuery) =>
       return lastPage.next ? allPages.length + 1 : undefined;
     },
     staleTime: 24 * 60 * 60 * 1000,
-    //initialData: {count: genres.length, results: genres}
+    
   })
 
 export default useGames;
