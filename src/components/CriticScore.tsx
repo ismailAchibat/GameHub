@@ -1,4 +1,4 @@
-import { Badge } from "@chakra-ui/react";
+import { Badge, Text } from "@chakra-ui/react";
 
 interface Props {
   score: number;
@@ -11,7 +11,7 @@ const CriticScore = ({ score }: Props) => {
       {score}
     </Badge>
   ) : (
-    "Unknown"
+    <Text>Unknown</Text>
   );
 };
 
