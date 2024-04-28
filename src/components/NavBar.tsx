@@ -3,7 +3,6 @@ import logo from "../assets/matr1xlogo_NoBG.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
-import HomePage from "../pages/HomePage";
 
 
 const NavBar = () => {
