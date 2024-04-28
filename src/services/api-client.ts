@@ -6,6 +6,7 @@ export interface FetchResponse<T>{
     results: T[];
 }
 
+
 const axiosInstance = axios.create({
     baseURL: 'https://api.rawg.io/api',
     params:{
@@ -31,6 +32,12 @@ class APIClient<T> {
             .get<T>(this.endpoint + '/' + id)
             .then(res => res.data)
     };
+
+    // getTrailer = (id: number | string) => {
+    //     return axiosInstance
+    //         .get<FetchTrailerResponse<T>>(this.endpoint + '/' + id + '/movies')
+    //         .then(res => res.data)
+    // }
 }
 
 export default APIClient;
