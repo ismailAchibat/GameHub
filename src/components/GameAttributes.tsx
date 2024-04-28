@@ -19,14 +19,14 @@ const GameAttributes = ({ game }: Props) => {
         <CriticScore score={game.metacritic} />
       </DefinitionItem>
       <DefinitionItem term="Genres">
-        {game.genres.map((genre) => (
-          <Text key={genre.id}>{genre.name}</Text>
-        ))}
+        {game.genres.length>0 ? (game.genres.map((genre) => (
+          <Text key={genre.id}>{genre.name}</Text>))) : 'Unknown'
+        }
       </DefinitionItem>
       <DefinitionItem term="Publishers">
-        {game.publishers?.map((p) => (
-          <Text key={p.id}>{p.name}</Text>
-        ))}
+        {game.publishers.length>0 ? (game.publishers.map((p) => (
+          <Text key={p.id}>{p.name}</Text>))) : 'Unknown'
+        }
       </DefinitionItem>
     </SimpleGrid>
   );
